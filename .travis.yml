@@ -12,4 +12,4 @@ after_success:
   - sh bintray.sh plexus-compiler-manager
   - ./bintray.sh plexus-compiler-test
   - cd plexus-compilers
-  - ./bintray.sh plexus-compiler-javac
+  - ../bintray.sh plexus-compiler-javac
