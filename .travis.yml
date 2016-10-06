@@ -12,4 +12,5 @@ after_success:
   - sh bintray.sh plexus-compiler-manager
   - ./bintray.sh plexus-compiler-test
   - cd plexus-compilers
+  - "curl -T ./pom.xml -H \"X-Bintray-Publish: 1\" -H \"X-Bintray-Override: 1\" -u$BT_USER:$BT_KEY https://api.bintray.com/content/$BT_USER/generic/plexus-compiler/jigsaw/org/codehaus/plexus/plexus-compilers/2.8.2-SNAPSHOT/plexus-compilers-2.8.2-SNAPSHOT.pom"
   - ../bintray.sh plexus-compiler-javac
