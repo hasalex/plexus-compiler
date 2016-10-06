@@ -3,10 +3,8 @@ jdk:
   - oraclejdk8
 
 cache:
-    directories:
-    - $HOME/.m2
+  directories:
+  - $HOME/.m2
 
-deploy:
-  provider: bintray
-  user: $BT_USER
-  key: $BT_KEY
+after_success:
+  - curl -T ./pom.xml -H \"X-Bintray-Publish: 1\" -H \"X-Bintray-Override: 1\" -u$BT_USERNAME:$BT_KEY https://api.bintray.com/content/$BT_USERNAME/maven/plexus-compiler/0/pom.xml"
