@@ -1,2 +1,2 @@
-curl -T ./$1/pom.xml -H \"X-Bintray-Publish: 1\" -H \"X-Bintray-Override: 1\" -u$BT_USERNAME:$BT_KEY https://api.bintray.com/content/$BT_USERNAME/generic/plexus-compiler/jigsaw/org/codehaus/plexus/$1/2.8.2-SNAPSHOT/$1-2.8.2-SNAPSHOT.pom
-curl -T ./$1/$1-2.8.2-SNAPSHOT.jar -H \"X-Bintray-Publish: 1\" -H \"X-Bintray-Override: 1\" -u$BT_USERNAME:$BT_KEY https://api.bintray.com/content/$BT_USERNAME/generic/plexus-compiler/jigsaw/org/codehaus/plexus/$1/2.8.2-SNAPSHOT/$1-2.8.2-SNAPSHOT.jar
+curl -T ./$1/pom.xml -H "X-Bintray-Publish: 1" -H "X-Bintray-Override: 1" -u$BT_USERNAME:$BT_KEY https://api.bintray.com/content/$BT_USERNAME/generic/plexus-compiler/jigsaw/org/codehaus/plexus/$1/2.8.2-SNAPSHOT/$1-2.8.2-SNAPSHOT.pom
+curl -T ./$1/target/$1-2.8.2-SNAPSHOT.jar -H "X-Bintray-Publish: 1" -H "X-Bintray-Override: 1" -u$BT_USERNAME:$BT_KEY https://api.bintray.com/content/$BT_USERNAME/generic/plexus-compiler/jigsaw/org/codehaus/plexus/$1/2.8.2-SNAPSHOT/$1-2.8.2-SNAPSHOT.jar
