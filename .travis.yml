@@ -8,7 +8,8 @@ cache:
 
 after_success:
   - "curl -T ./pom.xml -H \"X-Bintray-Publish: 1\" -H \"X-Bintray-Override: 1\" -u$BT_USERNAME:$BT_KEY https://api.bintray.com/content/$BT_USERNAME/generic/plexus-compiler/jigsaw/org/codehaus/plexus/plexus-compiler/2.8.2-SNAPSHOT/plexus-compiler-2.8.2-SNAPSHOT.pom"
-  - ./bintray.sh plexus-compiler-api
-  - ./bintray.sh plexus-compiler-manager
+  - sh bintray.sh plexus-compiler-api
+  - sh bintray.sh plexus-compiler-manager
   - ./bintray.sh plexus-compiler-test
-  - ./bintray.sh plexus-compilers
+  - cd plexus-compilers
+  - ./bintray.sh plexus-compiler-javac
